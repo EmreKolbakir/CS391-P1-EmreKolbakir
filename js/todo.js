@@ -15,16 +15,22 @@ document.addEventListener('DOMContentLoaded', function() {
     loadTodos('work', workTodoList);
 
     // Add task event listeners
-    document.getElementById('addAcademicalTodoButton').addEventListener('click', function() {
-        addTodo(newAcademicalTodoInput, academicalTodoList, 'academical');
+    newAcademicalTodoInput.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            addTodo(newAcademicalTodoInput, academicalTodoList, 'academical');
+        }
     });
 
-    document.getElementById('addDailyTodoButton').addEventListener('click', function() {
-        addTodo(newDailyTodoInput, dailyTodoList, 'daily');
+    newDailyTodoInput.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            addTodo(newDailyTodoInput, dailyTodoList, 'daily');
+        }
     });
 
-    document.getElementById('addWorkTodoButton').addEventListener('click', function() {
-        addTodo(newWorkTodoInput, workTodoList, 'work');
+    newWorkTodoInput.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            addTodo(newWorkTodoInput, workTodoList, 'work');
+        }
     });
 
     function addTodo(inputElement, todoList, listName) {
@@ -45,21 +51,13 @@ document.addEventListener('DOMContentLoaded', function() {
             saveTodos(listName, todoList);
         });
 
-        const deleteButton = document.createElement('button');
-        deleteButton.textContent = 'Remove';
-        deleteButton.addEventListener('click', function() {
-            listItem.remove();
-            saveTodos(listName, todoList);
-        });
-
-        listItem.appendChild(deleteButton);
         return listItem;
     }
 
     function saveTodos(listName, todoList) {
         const todos = Array.from(todoList.children).map(item => {
             return {
-                text: item.firstChild.textContent, // The firstChild is the text node of listItem
+                text: item.textContent, // Use textContent directly
                 completed: item.classList.contains('completed')
             };
         });
@@ -78,6 +76,16 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }
+
+    // Add Clear List buttons functionality
+    document.querySelectorAll('.clear-list-button').forEach(button => {
+        button.addEventListener('click', function() {
+            const list = button.parentElement.querySelector('ul');
+            list.querySelectorAll('.completed').forEach(item => {
+                item.remove();
+            });
+            const listName = list.id.replace('TodoItems', '');
+            saveTodos(listName, list);
+        });
+    });
 });
-
-

@@ -12,10 +12,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if (programButton) {
-        programButton.addEventListener('click', function() {
+        programButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            console.log("Button clicked"); // Add this line
             window.location.href = '../pages/program.html'; // Adjust the path as needed
         });
     }
+    
 
     if (linksButton) {
         linksButton.addEventListener('click', function(e) {

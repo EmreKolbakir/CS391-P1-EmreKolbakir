@@ -206,3 +206,47 @@ footer {
     color: #888;
 }
 
+/* Add styles for the weekly program page */
+.weekly-program-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weekly-program {
+    display: grid;
+    grid-template-columns: auto repeat(7, 1fr); /* One column for time, seven columns for days */
+    grid-template-rows: auto repeat(24, 1fr); /* One row for each hour */
+    gap: 1px; /* Gap between grid items */
+}
+
+.time-slots {
+    display: grid;
+    grid-template-rows: repeat(24, 1fr); /* One row for each hour */
+}
+
+.hour {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.1); /* Transparent background */
+    color: #FFFFFF;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* Seven columns for days */
+}
+
+.day-header {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.1); /* Transparent background */
+    color: #FFFFFF;
+}
+
+.program {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* Seven columns for days */
+    grid-template-rows: repeat(24, 1fr); /* One row for each hour */
+    /* Add additional styling for the program grid */
+}

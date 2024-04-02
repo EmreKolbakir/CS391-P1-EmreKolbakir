@@ -13,7 +13,11 @@
     <div class="container">
         <header>
             <h1>My Todo Lists</h1>
-            <p>Keep track of your tasks with ease. Add, complete, or remove tasks to stay organized across different areas of your life.</p>
+            <p>Keep track of your tasks with ease. Add, complete, or remove tasks to stay organized across different areas of your life.
+                <ul>
+                    <li>Click on the completed task to select it, then click the "Clear List" button to remove all completed tasks from the list.</li>
+                </ul>
+            </p>
         </header>
         <main class="todo-container">
             <section class="todo-list box">
@@ -21,19 +25,25 @@
                 <input type="text" id="newAcademicalTodo" placeholder="Add a new academical task..." autofocus>
                 <button id="addAcademicalTodoButton" class="button">Add Task</button>
                 <ul id="academicalTodoItems"></ul>
+                <button class="clear-list-button button">Clear List</button>
             </section>
             <section class="todo-list box">
                 <h2>Daily</h2>
                 <input type="text" id="newDailyTodo" placeholder="Add a new daily task...">
                 <button id="addDailyTodoButton" class="button">Add Task</button>
                 <ul id="dailyTodoItems"></ul>
+                <button class="clear-list-button button">Clear List</button>
             </section>
             <section class="todo-list box">
                 <h2>Work</h2>
                 <input type="text" id="newWorkTodo" placeholder="Add a new work task...">
                 <button id="addWorkTodoButton" class="button">Add Task</button>
                 <ul id="workTodoItems"></ul>
-            </section>
+                <button class="clear-list-button button">Clear List</button>
+            </section>            
+            <div class ="home-button-container">
+                <a href="../pages/home.html" id="homeButton" class="button">Home Page</a>
+            </div>
         </main>
     </div>
     <script src="../js/starts.js" defer></script>
