@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShortCuts - PlanWise</title>
+    <link rel="stylesheet" href="../css/styles.css"> <!-- Ensure the path is correct -->
+    <script src="../js/starts.js" defer></script>
+    <script src="../js/liveclock.js" defer></script>
+    <script src="../js/welcome.js" defer></script>
+    <script src="../js/navigation.js" defer></script>
+    <script src="../js/email.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="starCanvas"></canvas>
+    <div class="container">
+        <header>
+            <h1>Useful Links and Quick e-mail Page</h1>
+            <p>Explore quick access to your favorite platforms and send emails instantly. Stay connected effortlessly with just a click.</p>
+        </header>
+        <main>
+            <section id="main-links" class="box link-buttons">
+                <a href="home.html" id="homeButton" class="button">Home Page</a>
+                <a href="https://github.com" target="_blank" class="button">GitHub</a>
+                <a href="https://stackoverflow.com" target="_blank" class="button">StackOverflow</a>
+                <a href="https://www.linkedin.com" target="_blank" class="button">LinkedIn</a>
+                <a href="https://www.youtube.com" target="_blank" class="button">YouTube</a>
+                <a href="https://www.discord.com" target="_blank" class="button">Discord</a>
+                <a href="https://chat.openai.com/" target="_blank" class="button">ChatGPT</a>
+            </section>
+
+            <!-- Email input field and button -->
+            <form id="emailForm" class="box">
+                <label for="email">Send Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter recipient email">
+                <button id="sendEmailButton" class="button">Send Email</button>
+            </form>
+        </main>
+    </div> 
+</body>
+</html>

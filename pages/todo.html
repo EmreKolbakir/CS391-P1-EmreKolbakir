@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List - PlanWise</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/todo.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="starCanvas"></canvas>
+    <div class="container">
+        <header>
+            <h1>My Todo Lists</h1>
+            <p>Keep track of your tasks with ease. Add, complete, or remove tasks to stay organized across different areas of your life.</p>
+        </header>
+        <main class="todo-container">
+            <section class="todo-list box">
+                <h2>Homework/Academical</h2>
+                <input type="text" id="newAcademicalTodo" placeholder="Add a new academical task..." autofocus>
+                <button id="addAcademicalTodoButton" class="button">Add Task</button>
+                <ul id="academicalTodoItems"></ul>
+            </section>
+            <section class="todo-list box">
+                <h2>Daily</h2>
+                <input type="text" id="newDailyTodo" placeholder="Add a new daily task...">
+                <button id="addDailyTodoButton" class="button">Add Task</button>
+                <ul id="dailyTodoItems"></ul>
+            </section>
+            <section class="todo-list box">
+                <h2>Work</h2>
+                <input type="text" id="newWorkTodo" placeholder="Add a new work task...">
+                <button id="addWorkTodoButton" class="button">Add Task</button>
+                <ul id="workTodoItems"></ul>
+            </section>
+        </main>
+    </div>
+    <script src="../js/starts.js" defer></script>
+    <script src="../js/liveclock.js" defer></script>
+    <script src="../js/navigation.js" defer></script>
+    <footer>
+        <p>Web Page by Emre Kolbakir. ©2024</p>
+    </footer>
+</body>
+</html>

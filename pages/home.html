@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - PlanWise</title>
+    <link rel="stylesheet" href="../css/styles.css"> <!-- Ensure the path is correct -->
+    <script src="../js/starts.js" defer></script>
+    <script src="../js/liveclock.js" defer></script>
+    <script src="../js/welcome.js" defer></script>
+    <script src="../js/navigation.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Add defer attribute to ensure script executes after DOMContentLoaded -->
+</head>
+<body>
+    <canvas id="starCanvas"></canvas>
+    <div class="container">
+        <header>
+            <h1>Welcome to PlanWise Home Page <span id="username"></span></h1>
+            <p>Welcome to Home Page. Here, you can manage your to-do lists, plan your weekly schedule, and access useful resources. Choose what suits you best and get organized with PlanWise.</p>
+        </header>
+        <main>
+            <section id="main-links" class="box link-buttons">
+                <a href="pages/todo.html" id="todoButton" class="button">My Todo Lists</a>
+                <a href="pages/program.html" id="programButton" class="button">My Weekly Programme</a>
+                <a href="pages/links.html" id="linksButton" class="button">Quick Access</a>
+            </section>
+        </main>
+        <div id="clock-container"></div>
+    </div>
+    <footer>
+        <p>Web Page by Emre Kolbakir. ©2024</p>
+    </footer>
+</body>
+</html>
