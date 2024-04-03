@@ -206,47 +206,61 @@ footer {
     color: #888;
 }
 
-/* Add styles for the weekly program page */
-.weekly-program-container {
-    display: flex;
-    flex-direction: column;
+/* ... existing styles ... */
+
+.weekly-schedule-header, .weekly-schedule {
+    display: grid;
+    grid-template-columns: 60px repeat(7, 1fr); /* Adjust the first column for hours and the rest for days */
+    gap: 10px;
+}
+
+.weekly-schedule-header {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px 10px 0 0;
+    padding: 0 20px;
     align-items: center;
+    /* Set up so it's just one row high */
+    grid-auto-rows: 60px;
+     display: grid;
+    grid-template-columns: 60px repeat(7, 1fr); /* First column for hours */
+    gap: 10px;
 }
 
-.weekly-program {
-    display: grid;
-    grid-template-columns: auto repeat(7, 1fr); /* One column for time, seven columns for days */
-    grid-template-rows: auto repeat(24, 1fr); /* One row for each hour */
-    gap: 1px; /* Gap between grid items */
+.weekly-schedule {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 0 0 10px 10px;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    /* Set up the grid for hours */
+    grid-auto-rows: 60px;
 }
 
-.time-slots {
-    display: grid;
-    grid-template-rows: repeat(24, 1fr); /* One row for each hour */
-}
-
-.hour {
-    text-align: center;
+.time-slot, .hour-header, .day-header {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid #ccc;
+    border-radius: 5px;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.1); /* Transparent background */
-    color: #FFFFFF;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.days {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr); /* Seven columns for days */
+.hour-header {
+    /* Styling for hour column on the left */
+    text-align: right;
+    font-weight: bold;
 }
 
 .day-header {
+    /* Styling for day headers on the top */
     text-align: center;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.1); /* Transparent background */
-    color: #FFFFFF;
+    font-weight: bold;
 }
 
-.program {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr); /* Seven columns for days */
-    grid-template-rows: repeat(24, 1fr); /* One row for each hour */
-    /* Add additional styling for the program grid */
+.time-slot:hover {
+    background-color: rgba(255, 255, 255, 0.3);
 }
+
+
+/* ... */
