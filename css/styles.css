@@ -215,8 +215,9 @@ footer {
 }
 
 .weekly-schedule-header {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 20, 0.5);
     border-radius: 10px 10px 0 0;
+    box-shadow: 0 0 10px 6px rgba(29, 2, 80, 0.692);
     padding: 0 20px;
     align-items: center;
     /* Set up so it's just one row high */
@@ -227,8 +228,9 @@ footer {
 }
 
 .weekly-schedule {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 20, 0.5);
     border-radius: 0 0 10px 10px;
+    box-shadow: 0 0 10px 6px rgba(29, 2, 80, 0.692);
     padding: 20px;
     overflow: hidden;
     position: relative;
@@ -238,8 +240,9 @@ footer {
 }
 
 .time-slot, .hour-header, .day-header {
-    background-color: rgba(255, 255, 255, 0.2);
-    border: 1px solid #ccc;
+    background-color: rgba(0, 0, 39, 0.582);
+    border: 1px solid rgba(60, 17, 146, 0.897);
+    box-shadow: 0 0 10px 6px rgba(29, 2, 80, 0.692);
     border-radius: 5px;
     padding: 10px;
     cursor: pointer;
@@ -259,7 +262,76 @@ footer {
 }
 
 .time-slot:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(49, 49, 127, 0.85);
+    border: 1px solid #5900ff;
+}
+
+/* Additional Styles for Weekly Program Responsiveness */
+.program-container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Ensure items fill the container */
+    padding: 0 20px;
+}
+
+.weekly-schedule-header, .weekly-schedule {
+    display: grid;
+    grid-template-columns: 80px repeat(7, 1fr); /* Allocate space for hours and 7 days */
+    gap: 10px;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .program-container {
+        width: 95%; /* Slightly increase width for smaller screens */
+    }
+
+    .weekly-schedule-header, .weekly-schedule {
+        grid-template-columns: 50px repeat(7, 1fr); /* Adjust for smaller screen */
+    }
+    
+    /* Adjust time slot and header size for smaller screens */
+    .time-slot, .hour-header, .day-header {
+        padding: 5px;
+        font-size: 0.8rem; /* Smaller font size */
+    }
+}
+
+/* Adjust the home button's position if needed */
+.home-button {
+    position: middle; /* Adjusted to absolute for placement within .program-container */
+    top: -50px; /* Adjust this value based on your layout */
+    left: 0;
+    z-index: 10; /* Ensure it's above other elements */
+}
+
+/* Style for home button to make it look more like an actual button */
+.home-button-container a.button, .home-button {
+    display: inline-block; /* Make sure it's block-level for padding */
+    background-color: rgba(9, 4, 32, 0.384);
+    box-shadow: 0 0 10px 6px rgba(29, 2, 80, 0.692);
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+    text-decoration: none; /* Remove underline */
+    margin-top: 20px; /* Add some space from the top of the container */
+}
+
+.home-button-container a.button:hover, .home-button:hover {
+    background-color: rgba(49, 49, 127, 0.85);
+    transform: scale(1.05); /* Slight grow effect */
+}
+
+.home-button-container {
+    display: flex;
+    justify-content: center; /* This centers the button horizontally */
+    width: 100%; /* Ensure it spans the full width of its parent container */
+    margin-top: 20px; /* Optional: Adds some space above the home button */
 }
 
 
