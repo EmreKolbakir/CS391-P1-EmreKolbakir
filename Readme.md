@@ -41,7 +41,10 @@ PlanWise offers several key functionalities:
 2. To add a task: Click into the field that matches the type of task you want to add (for example, the Academical field). Type your task and press 'Enter'. Your task will appear in the list below the field.
 3. As you complete tasks throughout your day, click on each completed task in its list. This will mark the task as completed, visually striking it through.
 4. At the and of the day if you want to clear the completed task, click the "Clear List" button located at the bottom of each task list section. This will remove all tasks that you've marked as completed.
-5. *Screenshot Placeholder*
+![alt text](ScreenShots/Home1.png)
+![alt text](ScreenShots/Todo1.png)
+![alt text](ScreenShots/Todo2.png)
+
 
 
 ### Scenario 3: Scheduling and Managing Weekly Events
@@ -55,7 +58,7 @@ PlanWise offers a dynamic and interactive weekly program planner designed to hel
    - A cursor will appear in the selected time slot. Enter the details of your event (e.g., "Team Meeting" or "Math Lecture") and press 'Enter'. Your event is now scheduled and visible in the weekly program.
 4. **To modify or review an event**: Simply click on the event you've entered. You can now edit the text directly in the time slot to update the event details. Press 'Enter' to save any changes.
 5. **To remove an event**: Double-click on an existing event in your schedule. This action will clear the event from the time slot, allowing you to keep your weekly program accurate and up-to-date.
-6. *Screenshot Placeholder* - *Indicate where to insert a screenshot of the Weekly Program section with a few sample events scheduled.*
+![alt text](ScreenShots/Program1.png)
 
 This interactive scheduling tool is designed to make it easy for you to visualize your week at a glance, plan efficiently, and adapt your schedule as your plans evolve.
 
@@ -66,12 +69,11 @@ This interactive scheduling tool is designed to make it easy for you to visualiz
 2. This page displays a collection of frequently used links and resources such as GitHub, StackOverflow, LinkedIn, YouTube, and more.
 3. Click on any link to open it in a new tab for quick and easy access.
 4. For sending a quick email, scroll to the "Send Email" section. Enter the recipient's email, your message, and click "Send Email" to utilize the quick email feature.
-5. *Screenshot Placeholder*
-
+![alt text](ScreenShots/Quick1.png)
 
 ## Page Flow Diagram
 
-*Here, you should insert a diagram that visually represents how the pages of your application are interconnected. Use any diagramming tool to create it and insert it here as an image.*
+![alt text](ScreenShots/Flowcharts.png)
 
 ## Project Members and Responsibilities
 
