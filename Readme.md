@@ -1,0 +1,95 @@
+# PlanWise Application README
+
+## Table of Contents
+- [Application Overview](#application-overview)
+- [Usage Scenarios](#usage-scenarios)
+- [Page Flow Diagram](#page-flow-diagram)
+- [Project Members and Responsibilities](#project-members-and-responsibilities)
+- [Libraries Used](#libraries-used)
+- [Running the Project](#running-the-project)
+
+## Application Overview
+
+**PlanWise** is a comprehensive planning tool designed to streamline the organization of daily tasks, weekly schedules, and quick access to frequently used links. Targeted towards students, PlanWise offers a centralized platform for task management, schedule planning, and resource accessibility, ensuring users stay organized and efficient.
+
+### Purpose
+
+The primary purpose of PlanWise is to:
+- Facilitate daily task management through customizable to-do lists.
+- Allow users to plan and visualize their weekly academic and professional engagements.
+- Provide quick access to a curated list of useful links and resources and also quick e-mail shortcut.
+
+### Functions
+
+PlanWise offers several key functionalities:
+- Creation and management of to-do lists, with options to add, complete, and remove tasks.
+- A weekly program planner for scheduling academic lectures and professional meetings.
+- A shortcuts page for quick access to frequently used websites and resources and a e-mail shortcut.
+
+## Usage Scenarios
+
+### Scenario 1: Welcome Page
+1. Open the PlanWise application.
+2. Enter your details.
+3. Select your department
+4. Click the "Submit" button to access your personalized PlanWise dashboard.
+5. *Screenshot Placeholder*
+
+### Scenario 2: Adding a New Task to the Todo lists
+
+1. Navigate to the "My Todo Lists" page from the home screen.
+2. To add a task: Click into the field that matches the type of task you want to add (for example, the Academical field). Type your task and press 'Enter'. Your task will appear in the list below the field.
+3. As you complete tasks throughout your day, click on each completed task in its list. This will mark the task as completed, visually striking it through.
+4. At the and of the day if you want to clear the completed task, click the "Clear List" button located at the bottom of each task list section. This will remove all tasks that you've marked as completed.
+5. *Screenshot Placeholder*
+
+
+### Scenario 3: Scheduling and Managing Weekly Events
+
+PlanWise offers a dynamic and interactive weekly program planner designed to help you efficiently schedule and manage your weekly events, be they academic lectures, professional meetings, or personal commitments. Here’s how you can use it:
+
+1. From the home page, navigate to the "My Weekly Programme" section.
+2. You will see a grid representing the days of the week (from Monday to Sunday) and time slots for each day.
+3. **To schedule a new event**: 
+   - Click on the desired time slot corresponding to the day and time you wish to schedule your event.
+   - A cursor will appear in the selected time slot. Enter the details of your event (e.g., "Team Meeting" or "Math Lecture") and press 'Enter'. Your event is now scheduled and visible in the weekly program.
+4. **To modify or review an event**: Simply click on the event you've entered. You can now edit the text directly in the time slot to update the event details. Press 'Enter' to save any changes.
+5. **To remove an event**: Double-click on an existing event in your schedule. This action will clear the event from the time slot, allowing you to keep your weekly program accurate and up-to-date.
+6. *Screenshot Placeholder* - *Indicate where to insert a screenshot of the Weekly Program section with a few sample events scheduled.*
+
+This interactive scheduling tool is designed to make it easy for you to visualize your week at a glance, plan efficiently, and adapt your schedule as your plans evolve.
+
+
+### Scenario 4: Quick Access Page
+
+1. From the home page, click on "Quick Access" to navigate to the shortcuts page.
+2. This page displays a collection of frequently used links and resources such as GitHub, StackOverflow, LinkedIn, YouTube, and more.
+3. Click on any link to open it in a new tab for quick and easy access.
+4. For sending a quick email, scroll to the "Send Email" section. Enter the recipient's email, your message, and click "Send Email" to utilize the quick email feature.
+5. *Screenshot Placeholder*
+
+
+## Page Flow Diagram
+
+*Here, you should insert a diagram that visually represents how the pages of your application are interconnected. Use any diagramming tool to create it and insert it here as an image.*
+
+## Project Members and Responsibilities
+
+- **Emre Kolbakir**: Responsible for the entire project, including front-end design, back-end functionality, and documentation.
+
+## Libraries Used
+
+- **Orbitron Font (Google Fonts)**: Used for the application's typography to enhance UI aesthetics.
+- **Local Storage API**: Utilized for storing and retrieving user data (e.g., tasks, events) directly in the browser without needing a backend.
+
+## Running the Project
+
+To run PlanWise locally:
+
+1. Clone the repository to your local machine.
+git clone https://yourrepositorylink.com
+2. Open the `index.html` file in a web browser to view the home page.
+3. Explore the application's features by navigating through the pages using the links provided.
+
+*Note: No additional setup or dependencies are required to run the project.*
+
