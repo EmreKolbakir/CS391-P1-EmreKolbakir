@@ -89,7 +89,7 @@ This interactive scheduling tool is designed to make it easy for you to visualiz
 To run PlanWise locally:
 
 1. Clone the repository to your local machine.
-git clone https://github.com/EmreKolbakir/CS391_P1
+git clone https://github.com/EmreKolbakir/CS391-P1-EmreKolbakir
 2. Open the `index.html` file in a web browser to view the home page.
 3. Explore the application's features by navigating through the pages using the links provided.
 
