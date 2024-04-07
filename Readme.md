@@ -90,8 +90,11 @@ To run PlanWise locally:
 
 1. Clone the repository to your local machine.
 git clone https://github.com/EmreKolbakir/CS391-P1-EmreKolbakir
-2. Open the `index.html` file in a web browser to view the home page.
-3. Explore the application's features by navigating through the pages using the links provided.
+2. Ensure you have [Visual Studio Code] installed on your machine.
+3. Open Visual Studio Code and install the [Live Server extension]. This can be done by searching for "Live Server" in the Extensions view (Ctrl+Shift+X or Cmd+Shift+X on macOS).
+4. Open the cloned project folder in Visual Studio Code.
+5. Find the index.html file in the project structure, right-click on it, and select "Open with Live Server". This action will launch your default web browser and serve your project on a local server, typically at http://127.0.0.1:5500/index.html.
+6. Explore the application's features by navigating through the pages using the links provided within the application.
 
-*Note: No additional setup or dependencies are required to run the project.*
+*Note: The only additional setup required is Visual Studio Code and the Live Server extension. No further dependencies are necessary for running this project.*
 
