@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Use existing canvas or create a new one if it doesn't exist
     let canvas = document.getElementById('starCanvas');
     if (!canvas) {
         canvas = document.createElement('canvas');
@@ -8,21 +7,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     const ctx = canvas.getContext('2d');
     
-    // Function to set canvas size
     function setCanvasSize() {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
     }
     
-    // Adjust canvas size on window resize
     window.addEventListener('resize', setCanvasSize);
     setCanvasSize();
     
-    let stars = []; // Array to hold the static stars
-    let movingStars = []; // Array to hold moving stars
+    let stars = []; 
+    let movingStars = []; 
 
-    // Function to create stars
-    // Function to create stars, including shooting stars
 function createStars(count) {
     stars = [];
     movingStars = [];
@@ -32,12 +27,12 @@ function createStars(count) {
             y: Math.random() * canvas.height,
             size: Math.random() * 1.55
         });
-        if (Math.random() > 0.91) { // Some stars are shooting stars
+        if (Math.random() > 0.91) { 
             const startX = Math.random() * canvas.width;
             const startY = Math.random() * canvas.height;
             const endX = Math.random() * canvas.width;
             const endY = Math.random() * canvas.height;
-            const speed = Math.random() *1.5 -0.6; // Random speed
+            const speed = Math.random() *1.5 -0.6; 
             movingStars.push({
                 x: startX,
                 y: startY,
@@ -50,8 +45,6 @@ function createStars(count) {
     }
 }
 
-
-    // Function to move the moving stars
     function moveStars() {
         movingStars.forEach(star => {
             star.y += star.speed;
@@ -62,10 +55,9 @@ function createStars(count) {
         });
     }
 
-    // Function to draw the stars
     function drawStars() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.fillStyle = "#FFFFFF"; // Color of the stars
+        ctx.fillStyle = "#FFFFFF"; 
         stars.forEach(star => {
             ctx.beginPath();
             ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
@@ -78,13 +70,12 @@ function createStars(count) {
         });
     }
 
-    // Main animation loop
     function animate() {
         moveStars();
         drawStars();
         requestAnimationFrame(animate);
     }
 
-    createStars(1000); // Initialize with 550 stars
-    animate(); // Start the animation loop
+    createStars(1000); 
+    animate(); 
 });

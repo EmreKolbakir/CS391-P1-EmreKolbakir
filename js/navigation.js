@@ -7,15 +7,15 @@ document.addEventListener('DOMContentLoaded', function() {
     if (todoButton) {
         todoButton.addEventListener('click', function(e) {
             e.preventDefault();
-            window.location.href = '../pages/todo.html'; // Adjust the path as needed
+            window.location.href = '../pages/todo.html'; 
         });
     }
 
     if (programButton) {
         programButton.addEventListener('click', function(e) {
             e.preventDefault();
-            console.log("Button clicked"); // Add this line
-            window.location.href = '../pages/program.html'; // Adjust the path as needed
+            console.log("Button clicked"); 
+            window.location.href = '../pages/program.html'; 
         });
     }
     
@@ -23,13 +23,13 @@ document.addEventListener('DOMContentLoaded', function() {
     if (linksButton) {
         linksButton.addEventListener('click', function(e) {
             e.preventDefault();
-            window.location.href = '../pages/links.html'; // Adjust the path as needed
+            window.location.href = '../pages/links.html'; 
         });
     }
 
     if (homeButton) {
         homeButton.addEventListener('click', function() {
-            window.location.href = '../pages/home.html'; // Adjust the path as needed
+            window.location.href = '../pages/home.html'; 
         });
     }
 });

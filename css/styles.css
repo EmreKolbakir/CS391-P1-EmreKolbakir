@@ -17,34 +17,37 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 20px; /* Adjusts padding inside the container */
+    padding: 0 20px; 
 }
 
 header {
     text-align: center;
     margin-bottom: 20px;
+    flex-wrap: wrap;
     text-shadow: 4px 4px 4px rgb(93, 5, 255)
 }
 
 header h1 {
     color: #FFFFFF;
     margin-bottom: 10px;
+    flex-wrap: wrap; 
 }
 
 header p {
     margin-bottom: 20px;
+    flex-wrap: wrap; 
 }
 
 main {
     display: flex;
-    flex-wrap: wrap; /* Allows boxes to wrap on smaller screens */
-    justify-content: center; /* Centers the boxes horizontally */
-    gap: 33px; /* Adds space between boxes */
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 33px; 
 }
 
 .box {
-    flex: 1; /* Allows boxes to grow and occupy equal space */
-    min-width: 300px; /* Minimum width before boxes wrap */
+    flex: 1; 
+    min-width: 300px; 
     background-color: rgba(0, 0, 20, 0.5);
     padding: 20px;
     border-radius: 8px;
@@ -53,7 +56,6 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-     /* Centers content vertically */
 }
 
 h2 {
@@ -72,16 +74,16 @@ form label, form input, form textarea, form button, form select {
     border: none;
     border-radius: 5px;
     color: #C0C0C0;
-    font-family: 'Orbitron', sans-serif; /* Ensures font consistency */
+    font-family: 'Orbitron', sans-serif; 
     font-size: 1rem;
-    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    box-sizing: border-box; 
 }
 
 form select {
-    -webkit-appearance: none; /* Removes default Chrome/Safari styling */
-    -moz-appearance: none;    /* Removes default Firefox styling */
+    -webkit-appearance: none; 
+    -moz-appearance: none;   
     appearance: none; 
-    background-color: rgba(21, 21, 64, 0.5);        /* Removes default styling for other browsers */
+    background-color: rgba(21, 21, 64, 0.5);     
     background-repeat: no-repeat;
     background-position: right 10px center;
     background-size: 16px;
@@ -106,9 +108,9 @@ form button:hover {
     border-radius: 5px;
     padding: 10px 20px;
     margin-bottom: 10px;
-    width: 80%; /* Adjust button width as needed */
+    width: 80%; 
     transition: background-color 0.3s, color 0.3s;
-    text-align: center; /* Centers text within the button */
+    text-align: center;
 }
 
 .link-buttons a.button:hover, .link-buttons a.button:focus {
@@ -122,7 +124,7 @@ form button:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Ensure it stays behind all other content */
+    z-index: -1; 
 }
 
 footer {
@@ -131,14 +133,14 @@ footer {
     padding: auto;
     background-color: rgba(0, 0, 20, 0.5);
     text-align: center;
-    position: fixed; /* Adjusted for content overlap */
+    position: fixed; 
     bottom: 0;
 }
 
 
 @media (max-width: 768px) {
     .box {
-        width: 90%; /* Full width on smaller screens */
+        width: 90%; 
         margin: 10px 0;
     }
     main {
@@ -207,24 +209,22 @@ footer {
     color: #888;
 }
 
-/* ... existing styles ... */
-
 .weekly-schedule-header, .weekly-schedule {
     display: grid;
-    grid-template-columns: 50px repeat(7, 1fr); /* Adjust the first column for hours and the rest for days */
+    grid-template-columns: 50px repeat(7, minmax(120px, 1fr));
     gap: 10px;
+    width: 100%
 }
 
 .weekly-schedule-header {
     background-color: rgba(0, 0, 20, 0.5);
     border-radius: 10px 10px 0 0;
     box-shadow: 0 0 10px 6px rgba(29, 2, 80, 0.692);
-    padding: 0 20px;
+    padding: 0 10px;
     align-items: center;
-    grid-auto-rows: 60px; /* Set up so it's just one row high */
+    grid-auto-rows: 60px; 
     display: grid;
-    grid-template-columns: 50px repeat(7, 1fr); /* First column for hours */
-    gap: 10px;
+    overflow: hidden;
 }
 
 .weekly-schedule {
@@ -232,10 +232,11 @@ footer {
     border-radius: 0 0 10px 10px;
     box-shadow: 0 0 10px 6px rgba(29, 2, 80, 0.692);
     padding: 20px;
-    overflow: hidden;
+    overflow: none; 
     position: relative;
     z-index: 1;
-    grid-auto-rows: 38px;
+    grid-auto-rows: minmax(min-content, max-content);
+    align-content: start;
 }
 
 .time-slot, .hour-header, .day-header {
@@ -249,13 +250,11 @@ footer {
 }
 
 .hour-header {
-    /* Styling for hour column on the left */
     text-align: right;
     font-weight: bold;
 }
 
 .day-header {
-    /* Styling for day headers on the top */
     text-align: center;
     font-weight: bold;
 }
@@ -266,68 +265,61 @@ footer {
     transform: scale(1.05);
 }
 
-/* Additional Styles for Weekly Program Responsiveness */
 .program-container {
-    width: 80%;
+    width: 88%;
     max-width: none;
     margin: 20px auto;
-    display: block;
+    display: flex;
     flex-direction: column;
-    align-items: stretch; /* Ensure items fill the container */
+    align-items: stretch; 
     padding: 0;
     box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
     .program-container {
-        width: 95%; /* Slightly increase width for smaller screens */
+        width: 95%; 
     }
 
     .weekly-schedule-header, .weekly-schedule {
-        grid-template-columns: 50px repeat(7, 1fr); /* Adjust for smaller screen */
+        grid-template-columns: repeat(7, 1fr); 
     }
     
-    /* Adjust time slot and header size for smaller screens */
     .time-slot, .hour-header, .day-header {
         padding: 5px;
-        font-size: 0.8rem; /* Smaller font size */
+        font-size: 0.8rem; 
     }
-    .weekly-schedule {
-        overflow-x: auto;
-      }
+    
 }
 
-/* Adjust the home button's position if needed */
 .home-button {
-    position: middle; /* Adjusted to absolute for placement within .program-container */
-    top: -50px; /* Adjust this value based on your layout */
+    position: middle; 
+    top: -50px; 
     left: 0;
-    z-index: 10; /* Ensure it's above other elements */
+    z-index: 10; 
 }
 
-/* Style for home button to make it look more like an actual button */
 .home-button-container a.button, .home-button {
-    display: inline-block; /* Make sure it's block-level for padding */
+    display: inline-block;
     background-color: rgba(9, 4, 32, 0.384);
     box-shadow: 0 0 10px 6px rgba(29, 2, 80, 0.692);
-    color: #fff; /* White text */
+    color: #fff; 
     text-align: center;
     padding: 10px 15px;
     border-radius: 5px;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
-    text-decoration: none; /* Remove underline */
-    margin-top: 0px; /* Add some space from the top of the container */
+    text-decoration: none; 
+    margin-top: 0px; 
 }
 
 .home-button-container a.button:hover, .home-button:hover {
     background-color: rgba(49, 49, 127, 0.85);
-    transform: scale(1.05); /* Slight grow effect */
+    transform: scale(1.05); 
 }
 
 .home-button-container {
     display: flex;
-    justify-content: center; /* This centers the button horizontally */
-    width: 100%; /* Ensure it spans the full width of its parent container */
-    margin-top: 20px; /* Optional: Adds some space above the home button */
+    justify-content: center; 
+    width: 100%; 
+    margin-top: 20px; 
 }
-

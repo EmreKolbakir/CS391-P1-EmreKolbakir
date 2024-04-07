@@ -1,6 +1,0 @@
-- when ı return from links from home user name dissapere
-- responsiveness
--other things that hoca wants
-    - add her to the gith hub 
-    - markdown
-    - project upload

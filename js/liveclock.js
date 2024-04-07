@@ -1,4 +1,3 @@
-// Function to update the clock every second
 function updateClock() {
     const clockContainer = document.getElementById('clock-container');
     if (clockContainer) {
@@ -9,6 +8,5 @@ function updateClock() {
     }
 }
 
-// Update the clock initially and every second
 updateClock();
 setInterval(updateClock, 1000);

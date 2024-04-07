@@ -2,11 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const scheduleHeader = document.getElementById('weekly-schedule-header');
     const scheduleContainer = document.getElementById('weekly-schedule');
 
-    // Clear previous contents
     scheduleHeader.innerHTML = '<div class="hour-label-placeholder"></div>';
     scheduleContainer.innerHTML = '';
 
-    // Create headers for the days of the week
     const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
     daysOfWeek.forEach(day => {
         const dayHeader = document.createElement('div');
@@ -15,10 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
         scheduleHeader.appendChild(dayHeader);
     });
 
-    // Generate time slots for the schedule from 8 AM to 5 PM only
-    const hoursOfDay = ['08', '09', '10', '11', '12', '13', '14', '15', '16', '17'];
+    const hoursOfDay = ['09', '10', '11', '12', '13', '14', '15', '16', '17'];
     hoursOfDay.forEach(hour => {
-        // Create hour labels on the left side for each hour
         const hourLabel = document.createElement('div');
         hourLabel.className = 'hour-label';
         hourLabel.textContent = `${hour}:00`;
@@ -29,22 +25,18 @@ document.addEventListener('DOMContentLoaded', () => {
             timeSlot.className = 'time-slot';
             timeSlot.dataset.hour = hour;
             timeSlot.dataset.day = day;
-            timeSlot.contentEditable = 'true'; // Make the time slot editable
-            timeSlot.setAttribute('role', 'textbox'); // ARIA role for accessibility
-            timeSlot.setAttribute('aria-multiline', 'false'); // ARIA attribute
-            
-            // Load any saved events
+            timeSlot.contentEditable = 'true'; 
+            timeSlot.setAttribute('role', 'textbox'); 
+            timeSlot.setAttribute('aria-multiline', 'false'); 
             loadEvent(timeSlot, day, hour);
 
-            // Event listener for saving on 'Enter'
             timeSlot.addEventListener('keydown', function(event) {
                 if (event.key === 'Enter') {
-                    event.preventDefault(); // Prevent newline on Enter key
+                    event.preventDefault(); 
                     saveEvent(this, day, hour);
                 }
             });
 
-            // Double-click to remove an event
             timeSlot.addEventListener('dblclick', function() {
                 removeEvent(this, day, hour);
             });
@@ -68,7 +60,7 @@ function saveEvent(timeSlot, day, hour) {
     const title = timeSlot.textContent.trim();
     if (title) {
         localStorage.setItem(eventKey, title);
-        timeSlot.blur(); // Remove focus after saving
+        timeSlot.blur(); 
         timeSlot.classList.add('event-scheduled');
     }
 }

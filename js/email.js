@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-            window.open(mailtoLink); // Open email client in a new window
+            window.open(mailtoLink); 
         });
     }
 });

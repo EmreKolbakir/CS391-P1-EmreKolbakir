@@ -1,20 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Define input elements
     const newAcademicalTodoInput = document.getElementById('newAcademicalTodo');
     const newDailyTodoInput = document.getElementById('newDailyTodo');
     const newWorkTodoInput = document.getElementById('newWorkTodo');
     
-    // Define list elements
     const academicalTodoList = document.getElementById('academicalTodoItems');
     const dailyTodoList = document.getElementById('dailyTodoItems');
     const workTodoList = document.getElementById('workTodoItems');
 
-    // Load stored todos
     loadTodos('academical', academicalTodoList);
     loadTodos('daily', dailyTodoList);
     loadTodos('work', workTodoList);
 
-    // Add task event listeners
     newAcademicalTodoInput.addEventListener('keypress', function(event) {
         if (event.key === 'Enter') {
             addTodo(newAcademicalTodoInput, academicalTodoList, 'academical');
@@ -57,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function saveTodos(listName, todoList) {
         const todos = Array.from(todoList.children).map(item => {
             return {
-                text: item.textContent, // Use textContent directly
+                text: item.textContent, 
                 completed: item.classList.contains('completed')
             };
         });
@@ -77,7 +73,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Add Clear List buttons functionality
     document.querySelectorAll('.clear-list-button').forEach(button => {
         button.addEventListener('click', function() {
             const list = button.parentElement.querySelector('ul');
