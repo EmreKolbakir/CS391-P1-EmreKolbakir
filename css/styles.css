@@ -80,7 +80,8 @@ form label, form input, form textarea, form button, form select {
 form select {
     -webkit-appearance: none; /* Removes default Chrome/Safari styling */
     -moz-appearance: none;    /* Removes default Firefox styling */
-    appearance: none;         /* Removes default styling for other browsers */
+    appearance: none; 
+    background-color: rgba(21, 21, 64, 0.5);        /* Removes default styling for other browsers */
     background-repeat: no-repeat;
     background-position: right 10px center;
     background-size: 16px;

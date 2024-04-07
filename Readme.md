@@ -33,7 +33,7 @@ PlanWise offers several key functionalities:
 2. Enter your details.
 3. Select your department
 4. Click the "Submit" button to access your personalized PlanWise dashboard.
-5. *Screenshot Placeholder*
+5. (../ScreenShots/Welcome1.png)
 
 ### Scenario 2: Adding a New Task to the Todo lists
 
@@ -87,7 +87,7 @@ This interactive scheduling tool is designed to make it easy for you to visualiz
 To run PlanWise locally:
 
 1. Clone the repository to your local machine.
-git clone https://yourrepositorylink.com
+git clone https://github.com/EmreKolbakir/CS391_P1
 2. Open the `index.html` file in a web browser to view the home page.
 3. Explore the application's features by navigating through the pages using the links provided.
 
