@@ -33,7 +33,7 @@ PlanWise offers several key functionalities:
 2. Enter your details.
 3. Select your department
 4. Click the "Submit" button to access your personalized PlanWise dashboard.
-5. (../ScreenShots/Welcome1.png)
+5. ![(../ScreenShots/Welcome1.png)](ScreenShots/Welcome1.png)
 
 ### Scenario 2: Adding a New Task to the Todo lists
 
